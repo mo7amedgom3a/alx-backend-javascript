@@ -1,0 +1,6 @@
+# Ignore npm configuration files
+package-lock.json
+npm-debug.log
+
+# Ignore directories used by npm
+node_modules/
