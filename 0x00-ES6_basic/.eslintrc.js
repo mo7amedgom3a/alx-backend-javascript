@@ -1,24 +1,30 @@
-module.exports = {
-  env: {
-    browser: true,
-    commonjs: true,
-    es2021: true,
-    node: true
-  },
-  extends: [
-    'plugin:react/recommended',
-    'plugin:jest/recommended',
-    'standard'
+export const env = {
+  browser: false,
+  es6: true,
+  jest: true,
+};
+
+export const globals = {
+  Atomics: 'readonly',
+  SharedArrayBuffer: 'readonly',
+};
+export const parserOptions = {
+  ecmaVersion: 2018,
+  sourceType: 'module',
+};
+export const plugins = ['jest'];
+export const rules = {
+  'no-console': 'off',
+  'no-shadow': 'off',
+  'no-restricted-syntax': [
+    'error',
+    'LabeledStatement',
+    'WithStatement',
   ],
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true
-    },
-    ecmaVersion: 12
-  },
-  plugins: [
-    'react', 'react-hooks', 'jest'
-  ],
-  rules: {
+};
+export const overrides = [
+  {
+    files: ['*.js'],
+    excludedFiles: 'babel.config.js',
   }
-}
+];
