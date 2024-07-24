@@ -10,4 +10,3 @@ function getCurrentYear() {
       [`capita-${getCurrentYear()}`]: capita,
     };
   }
-  
